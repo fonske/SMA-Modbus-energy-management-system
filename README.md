@@ -1,28 +1,45 @@
 # SMA-Modbus-energy-management-system
-EMS in Home Assisant and node red.
+EMS in Home Assisant and Node-RED
 
-I made en Energy Management system in node red that runs as an adon in Home Assistant.
+I’ve created an Energy Management System (EMS) using Node-RED, running as an add-on in Home Assistant.
 
-Goal: The goal of this EMS is to make my classic SMA inverter a bit smarter, so I can take advantage of some situations and but trying to avoid the negative situations using hourly dynamic elictricity prices. 
+Goal:
+The goal of this EMS is to make my classic SMA inverter smarter. I want to take advantage of favorable electricity prices and avoid negative situations using hourly dynamic pricing.
 
-I started this in 2022, when my panels where installed. These are 12 panels (405W) South East and 10 panels (405W) South West. 
-The inverter is a SMA Tripower 8 SE with a SMA Home manager 2 with a BYD battery. 
+I started this in 2022, when I installed my solar panels:
 
-Important notice: I removed the SMA Home Manager 2 from Sunny Portal and only use Home assistant to control my system. The reason is that since the latest firmware update of the Home manager 2, modbus register 41255 that controls the curtailment, gets overwritten by the SMA Home manager 2.
-SMA is working on their version of an EMS that will be released in Q3 of 2025, so they changed how the Home Manager 2 works with the inverter. 
-You can only have control over the modbus register 41255 without the function of Home manager 2. 
-I removed it from Sunnyportal and now my Home manager 2 works like a regular Energy meter. It still does basic control of my battery, but now I have full acces to all registers. 
-If you have a classic SMA Enegery meter, then it should work without this caveat. 
+12 panels (405W) facing South-East
 
-What features are in this release: 
+10 panels (405W) facing South-West
 
-    1. Zero export of energy when export price is negative + only generate the energy that the house is currently using.
-    2. If import prices are negative --> charge battery @ 3 most negative prices (get paid to charge!!). (This feature is stil in testfase)
-    3. Sell excess energy at the higest price in the morning and in the evening if solar forecast is abundant from march untill september.
-    4. Start charging the battery at a later time when export prices are lowest.
-    5. Winterflow: Charge the battery every night at the 4 cheapest hours if the solar forecast today is smaller then 15 Kw untill 100%  full, 
-       only when the spread between the lowest and highest price is high enough.
-    6. Use the battery for all the hours that import prices are above a treashold during dunkelflaute (low forecast)
+Inverter: SMA Tripower 8 SE
+
+Battery: BYD
+
+Energy meter: SMA Home Manager 2
+
+⚠️ Important Notice:
+I removed the SMA Home Manager 2 from Sunny Portal and only use Home Assistant to control my system.
+Since the latest firmware update, Modbus register 41255 (used for curtailment control) gets overwritten by the Home Manager 2.
+SMA is preparing their own EMS (expected Q3 2025), so they changed how the Home Manager interacts with the inverter.
+
+To regain full control over Modbus, I unlinked the Home Manager 2 from Sunny Portal.
+It now acts like a standard energy meter. It still controls the battery’s basic behavior, but I have full access to all registers again.
+If you use a classic SMA Energy Meter (not Home Manager 2), this limitation does not apply.
+
+Features in this Release:
     
-    
-Important notice: You are free to use my flows and adjust them for your own purpose or system and make them better. You use them at your own expense. 
+    1. Zero export when export price is negative → Only generate energy used in the house.
+
+    2. Negative import prices → Charge the battery during the 3 most negative price hours (still in test phase).
+
+    3. Smart selling → Sell excess energy at peak prices in the morning/evening, if solar forecast is strong (March–September).
+
+    4. Delayed battery charging → Wait until export prices are lowest.
+
+    5. Winterflow → Charge battery during the 4 cheapest hours at night if solar forecast <15 kWh and price spread is significant.
+
+    6. Dunkelflaute mode → Use battery during hours when import prices are above a defined threshold.
+
+🛠️ Note:
+Feel free to use or modify my flows for your own setup. You do so at your own risk.

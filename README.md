@@ -43,3 +43,5 @@ Features in this Release:
 
 🛠️ Note:
 Feel free to use or modify my flows for your own setup. You do so at your own risk.
+
+<img width="1063" alt="image" src="https://github.com/user-attachments/assets/053e4064-e1de-4b2d-af4b-a0f1a01bc422" />

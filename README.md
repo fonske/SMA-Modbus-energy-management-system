@@ -27,7 +27,7 @@ To regain full control over Modbus, I unlinked the Home Manager 2 from Sunny Por
 It now acts like a standard energy meter. It still controls the battery’s basic behavior, but I have full access to all registers again.
 If you use a classic SMA Energy Meter (not Home Manager 2), this limitation does not apply.
 
-Features in this Release:
+Features in this Release 1.0:
     
     1. Zero export when export price is negative → Only generate energy used in the house.
 

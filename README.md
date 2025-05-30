@@ -16,7 +16,7 @@ If you have a classic SMA Enegery meter, then it should work without this caveat
 
 What features are in this release: 
 
-    1. Zero export when export price is negative + only generate the energy that the house is curentely using.
+    1. Zero export of energy when export price is negative + only generate the energy that the house is currently using.
     2. If import prices are negative --> charge battery @ 3 most negative prices (get paid to charge!!). (This feature is stil in testfase)
     3. Sell excess energy at the higest price in the morning and in the evening if solar forecast is abundant from march untill september.
     4. Start charging the battery at a later time when export prices are lowest.

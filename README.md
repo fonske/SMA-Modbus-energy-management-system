@@ -25,3 +25,4 @@ What features are in this release:
     6. Use the battery for all the hours that import prices are above a treashold during dunkelflaute (low forecast)
     
     
+Important notice: You are free to use my flows and adjust them for your own purpose or system and make them better. You use them at your own expense. 

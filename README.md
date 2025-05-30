@@ -1,5 +1,5 @@
 # SMA-Modbus-energy-management-system
-EMS in Home Assisant and node red
+EMS in Home Assisant and node red.
 
 I made en Energy Management system in node red that runs as an adon in Home Assistant.
 

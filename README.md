@@ -48,3 +48,18 @@ Feel free to use or modify my flows for your own setup. You do so at your own ri
 
 <img width="993" alt="image" src="https://github.com/user-attachments/assets/8b72d425-1f3d-4b6b-9fc8-65d8495aefa0" />
 
+<img width="710" alt="image" src="https://github.com/user-attachments/assets/7757c1ec-6be6-4901-a245-476732700c47" />
+
+<img width="1708" alt="image" src="https://github.com/user-attachments/assets/7bb14797-705e-44bb-8b82-ad97170af8c0" />
+
+<img width="1506" alt="image" src="https://github.com/user-attachments/assets/30601cb8-5a07-41e5-a8d7-a372f6541ad5" />
+
+<img width="1675" alt="image" src="https://github.com/user-attachments/assets/42cc0725-ea89-499f-a1fe-733d622cff18" />
+
+<img width="1483" alt="image" src="https://github.com/user-attachments/assets/669d6f3c-d366-454e-90d9-9418013f31e3" />
+
+<img width="1526" alt="image" src="https://github.com/user-attachments/assets/7e187848-4cfc-46bc-83fe-bed33e142076" />
+
+
+
+

@@ -62,8 +62,8 @@ The file "ALL IN ONE . JSON" contains al the flows in the pictures below. You ca
 
 <img width="1526" alt="image" src="https://github.com/user-attachments/assets/7e187848-4cfc-46bc-83fe-bed33e142076" />
 
-The file SENSORS.YAML contains al the sensors I had to create in addition to already existing sensors. You will need to create them in your configuration.yaml file of your Home Assistant.  
+The file SENSORS.YAML contains all of the the sensors I had to create in addition to already existing sensors. You will need to create them in your configuration.yaml file of your Home Assistant.  
 
-The file SOLAR_FORECAST contains the code to use in an apexchart to make it visual of what is happening during the day. 
+The file SOLAR_FORECAST(APEXCHART) contains the code to use in an apexchart to make it visual of what is happening during the day. 
 
 

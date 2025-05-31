@@ -33,7 +33,7 @@ Features in this Release 1.0:
     
     1. Zero export when export price is negative → Only generate energy used in the home.
 
-    2. Negative import prices → Charge the battery during the 3 most negative price hours (still in test phase).
+    2. Negative import prices → Charge the battery during the 3 most negative price hours and stop PV production during that time (still in test phase).
 
     3. Smart selling → Sell excess energy at peak price in the morning/evening, if solar forecast is strong (March–September).
 

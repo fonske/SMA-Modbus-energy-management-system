@@ -27,13 +27,16 @@ To regain full control over Modbus, I unlinked the Home Manager 2 from Sunny Por
 It now acts like a standard energy meter. It still controls the battery’s basic behavior, but I have full access to all registers again.
 If you use a classic SMA Energy Meter (not Home Manager 2), this limitation does not apply. 
 
+My system is a work in progress and I am always trying to improve it. This means that adjustments will still occur. I started this back in 2022 - ... 
+
 You are free to use the code in this project as inspiration, but you remain responsible yourself for what you do with it and for your own system. I am in no means liable for mistakes or damage to you own system. 
 
 Features in this Release 1.0:
     
     1. Zero export when export price is negative → Only generate energy used in the home.
 
-    2. Negative import prices → Charge the battery during the 3 most negative price hours and stop PV production during that time (still in test phase).
+    2. Negative import prices → Charge the battery during the 3 most negative price hours and stop PV production during that time.
+       (still in test phase)
 
     3. Smart selling → Sell excess energy at peak price in the morning/evening, if solar forecast is strong (March–September).
 

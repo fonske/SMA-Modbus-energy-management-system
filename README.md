@@ -62,6 +62,6 @@ The file "ALL IN ONE . JSON" contains al the flows in the pictures below. You ca
 
 <img width="1526" alt="image" src="https://github.com/user-attachments/assets/7e187848-4cfc-46bc-83fe-bed33e142076" />
 
-
+De file sensors.yaml contains al the sensors I had to create in addition to already existing sensors. You will need to create them in your configuration.yaml file of your Home Assistant.  
 
 

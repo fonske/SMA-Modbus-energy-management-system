@@ -31,17 +31,17 @@ You are free to use the code in this project as inspiration, but you remain resp
 
 Features in this Release 1.0:
     
-    1. Zero export when export price is negative → Only generate energy used in the house.
+    1. Zero export when export price is negative → Only generate energy used in the home.
 
     2. Negative import prices → Charge the battery during the 3 most negative price hours (still in test phase).
 
-    3. Smart selling → Sell excess energy at peak prices in the morning/evening, if solar forecast is strong (March–September).
+    3. Smart selling → Sell excess energy at peak price in the morning/evening, if solar forecast is strong (March–September).
 
-    4. Delayed battery charging → Wait until export prices are lowest.
+    4. Delayed battery charging → Wait until export prices are lowest. Always keeps 20% into the battery and charges up to 20% before delaying the rest of the charging. 
 
     5. Winterflow → Charge battery during the 4 cheapest hours at night if solar forecast <15 kWh and price spread is significant.
 
-    6. Dunkelflaute mode → Use battery during hours when import prices are above a defined threshold.
+    6. LowPV-mode → Use battery during hours when import prices are above a defined threshold.
 
 🛠️ Note:
 Feel free to use or modify my flows for your own setup. You do so at your own risk.

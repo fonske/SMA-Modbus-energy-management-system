@@ -45,7 +45,8 @@ Features in this Release 1.0:
 
     5. Winterflow → Charge battery during the 4 cheapest hours at night if solar forecast <15 kWh and price spread is significant.
 
-    6. LowPV-mode → Use battery during hours when import prices are above a defined threshold.
+    6. LowPV-mode → In winter PV production is at its lowest. 
+       Use battery only during hours when import prices are above a defined threshold.
 
 🛠️ Note:
 Feel free to use or modify my flows for your own setup. You do so at your own risk.

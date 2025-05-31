@@ -1,0 +1,185 @@
+#this is the code to use in an apexchart to visualise what is happening during the day. The example is on the top right on the screenshot of the dashboard. 
+
+type: custom:apexcharts-card
+header:
+  title: Solar forecast
+  show: true
+  show_states: true
+  colorize_states: true
+apex_config:
+  chart:
+    height: 300px
+  tooltip:
+    enabled: true
+    shared: true
+    followCursor: true
+graph_span: 24h
+span:
+  start: day
+yaxis:
+  - id: capacity
+    show: true
+    opposite: true
+    decimals: 0
+    max: 100
+    min: 0
+    apex_config:
+      tickAmount: 10
+  - id: kWh
+    show: true
+    min: 0
+    apex_config:
+      tickAmount: 10
+  - id: header_only
+    show: false
+series:
+  - entity: sensor.sn_XXXXXXXXXX_pv_power
+    name: Solar Power (now)
+    type: area
+    stroke_width: 2
+    float_precision: 2
+    color: Orange
+    opacity: 0.2
+    yaxis_id: kWh
+    unit: kW
+    extend_to: now
+    transform: return x / 1000;
+    show:
+      legend_value: true
+      in_header: false
+    group_by:
+      func: avg
+      duration: 5m
+  - entity: sensor.current_houseconsumption
+    name: House Consumption
+    type: area
+    stroke_width: 1
+    float_precision: 2
+    color: red
+    opacity: 0.2
+    yaxis_id: kWh
+    unit: kW
+    extend_to: now
+    transform: return x / 1000;
+    show:
+      legend_value: true
+      in_header: false
+    group_by:
+      func: avg
+      duration: 1m
+  - entity: sensor.sn_XXXXXXXXXX_battery_power_charge_total
+    name: Charge Battery
+    type: area
+    stroke_width: 1
+    float_precision: 2
+    color: pink
+    opacity: 0.5
+    yaxis_id: kWh
+    unit: kW
+    extend_to: now
+    transform: return x / 1000;
+    show:
+      legend_value: true
+      in_header: false
+    group_by:
+      func: avg
+      duration: 1m
+  - entity: sensor.sn_XXXXXXXXXX_battery_power_discharge_total
+    name: Discharge Battery
+    type: area
+    stroke_width: 1
+    float_precision: 2
+    color: lightgreen
+    opacity: 0.2
+    yaxis_id: kWh
+    unit: kW
+    extend_to: now
+    transform: return x / 1000;
+    show:
+      legend_value: true
+      in_header: false
+    group_by:
+      func: avg
+      duration: 1m
+  - entity: sensor.solcast_pv_forecast_forecast_today
+    name: Forecast
+    color: Grey
+    opacity: 0.2
+    stroke_width: 0
+    type: area
+    time_delta: +15min
+    extend_to: false
+    yaxis_id: kWh
+    show:
+      legend_value: false
+      in_header: false
+    data_generator: |
+      return entity.attributes.detailedForecast.map((entry) => {
+            return [new Date(entry.period_start), entry.pv_estimate];
+          });
+  - entity: sensor.solcast_pv_forecast_forecast_today
+    name: Forecast 10%
+    color: Grey
+    opacity: 0.2
+    stroke_width: 0
+    type: area
+    time_delta: +15min
+    extend_to: false
+    yaxis_id: kWh
+    show:
+      legend_value: false
+      in_header: false
+    data_generator: |
+      return entity.attributes.detailedForecast.map((entry) => {
+            return [new Date(entry.period_start), entry.pv_estimate10];
+          });
+  - entity: sensor.sn_XXXXXXXXXX_daily_yield
+    yaxis_id: header_only
+    name: Today Actual
+    stroke_width: 2
+    color: Orange
+    show:
+      legend_value: true
+      in_header: true
+      in_chart: false
+  - entity: sensor.solcast_pv_forecast_forecast_today
+    yaxis_id: header_only
+    name: Today Forecast
+    color: Grey
+    show:
+      legend_value: true
+      in_header: true
+      in_chart: false
+  - entity: sensor.solcast_pv_forecast_forecast_today
+    attribute: estimate10
+    yaxis_id: header_only
+    name: Today Forecast 10%
+    color: Grey
+    opacity: 0.3
+    show:
+      legend_value: true
+      in_header: true
+      in_chart: false
+  - entity: sensor.solcast_pv_forecast_forecast_remaining_today
+    yaxis_id: header_only
+    name: Remaining
+    color: Grey
+    show:
+      legend_value: true
+      in_header: true
+      in_chart: false
+  - entity: sensor.sn_XXXXXXXXXX_battery_soc_total
+    name: Battery
+    float_precision: 1
+    type: line
+    color: red
+    stroke_width: 2
+    opacity: 0.6
+    yaxis_id: capacity
+    extend_to: now
+    show:
+      legend_value: true
+      in_header: false
+    group_by:
+      func: last
+      duration: 1m

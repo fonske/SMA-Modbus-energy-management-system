@@ -38,6 +38,8 @@ Features in this Release 1.0:
     3. Smart selling → Sell excess energy at peak price in the morning/evening, if solar forecast is strong (March–September).
 
     4. Delayed battery charging → Wait until export prices are lowest. Always keeps 20% into the battery and charges up to 20% before delaying the rest of the charging. 
+       It wil start charging if export price is negative. If the battery is full it will automaticaly reduce the power it generates. It will only produce power that the house is using at that time.
+       If the price turns positive again, then the PV panels will produce in full force again. 
 
     5. Winterflow → Charge battery during the 4 cheapest hours at night if solar forecast <15 kWh and price spread is significant.
 

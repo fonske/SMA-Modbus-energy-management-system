@@ -7,11 +7,11 @@
         unique_id: current_houseconsumption
         unit_of_measurement: "W"
         value_template: >
-          {{ ((states('sensor.sn_3012415982_pv_power') | float(0)) 
+          {{ ((states('sensor.xxxxxxxx_pv_power') | float(0)) 
             - (states('sensor.electricity_meter_grid_power_return') | float(0)) 
             + (states('sensor.electricity_meter_grid_power_usage') | float(0))
-            + (states('sensor.sn_3012415982_battery_power_discharge_total') | float(0))
-            - (states('sensor.sn_3012415982_battery_power_charge_total') | float(0))) 
+            + (states('sensor.sn_xxxxxxxx_battery_power_discharge_total') | float(0))
+            - (states('sensor.sn_xxxxxxxx_battery_power_charge_total') | float(0))) 
             | round(2) }}
 
       houseconsumption_minus_pvgen:
@@ -24,7 +24,7 @@
           {{ house_consumption - pv_power }}
         availability_template: >
           {{ states('sensor.current_houseconsumption') not in ['unknown', 'unavailable'] and
-            states('sensor.sn_3012415982_pv_power') not in ['unknown', 'unavailable'] }}
+            states('sensor.sn_xxxxxxxx_pv_power') not in ['unknown', 'unavailable'] }}
 
       minimum_import_price_minus_current_import_price:
         friendly_name: "MinImportPrice - CurrentImportPrice"
@@ -49,4 +49,4 @@
           {{ pv_power - house_consumption }}
         availability_template: >
           {{ states('sensor.current_houseconsumption') not in ['unknown', 'unavailable'] and
-            states('sensor.sn_3012415982_pv_power') not in ['unknown', 'unavailable'] }}
+            states('sensor.sn_xxxxxxxx_pv_power') not in ['unknown', 'unavailable'] }}

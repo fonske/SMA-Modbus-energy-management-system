@@ -19,13 +19,15 @@ Battery: BYD
 Energy meter: SMA Home Manager 2
 
 ⚠️ Important Notice:
-I removed the SMA Home Manager 2 from Sunny Portal and only use Home Assistant to control my system.
+I removed the SMA Home Manager 2 from Sunny Portal and only use Home Assistant to control my system. One caveat is that you lose all the data you collected there. 
 Since the latest firmware update, Modbus register 41255 (used for curtailment control) gets overwritten by the Home Manager 2.
 SMA is preparing their own EMS (expected Q3 2025), so they changed how the Home Manager interacts with the inverter.
 
 To regain full control over Modbus, I unlinked the Home Manager 2 from Sunny Portal.
 It now acts like a standard energy meter. It still controls the battery’s basic behavior, but I have full access to all registers again.
-If you use a classic SMA Energy Meter (not Home Manager 2), this limitation does not apply.
+If you use a classic SMA Energy Meter (not Home Manager 2), this limitation does not apply. 
+
+You are free to use the code in this project as inspiration, but you remain responsible yourself for what you do with it and for your own system. I am in no means liable for mistakes or damage to you own system. 
 
 Features in this Release 1.0:
     

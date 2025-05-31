@@ -1,0 +1,52 @@
+#In this file you will find all the additional sensors I created in mijn configuration.yaml file in Home Assistant in addition to existing sensors. 
+
+
+
+      current_houseconsumption:
+        friendly_name: "Current House Consumption"
+        unique_id: current_houseconsumption
+        unit_of_measurement: "W"
+        value_template: >
+          {{ ((states('sensor.sn_3012415982_pv_power') | float(0)) 
+            - (states('sensor.electricity_meter_grid_power_return') | float(0)) 
+            + (states('sensor.electricity_meter_grid_power_usage') | float(0))
+            + (states('sensor.sn_3012415982_battery_power_discharge_total') | float(0))
+            - (states('sensor.sn_3012415982_battery_power_charge_total') | float(0))) 
+            | round(2) }}
+
+      houseconsumption_minus_pvgen:
+        friendly_name: "HouseConsumption - PVGen"
+        unique_id: "houseconsumption_minus_pvgen"
+        unit_of_measurement: "W"
+        value_template: >
+          {% set house_consumption = states('sensor.current_houseconsumption') | float(0) %}
+          {% set pv_power = states('sensor.sn_3012415982_pv_power') | float(0) %}
+          {{ house_consumption - pv_power }}
+        availability_template: >
+          {{ states('sensor.current_houseconsumption') not in ['unknown', 'unavailable'] and
+            states('sensor.sn_3012415982_pv_power') not in ['unknown', 'unavailable'] }}
+
+      minimum_import_price_minus_current_import_price:
+        friendly_name: "MinImportPrice - CurrentImportPrice"
+        unique_id: "minimum_import_price_minus_current_import_price"
+        unit_of_measurement: "€"
+        value_template: >
+          {% set minimum_import_price = states('input_number.minimum_import_price') | float(0) %}
+          {% set current_import_price = states('sensor.adjusted_current_electricity_import_price') | float(0) %}
+          {{ minimum_import_price - current_import_price }}
+        availability_template: >
+          {{ states('input_number.minimum_import_price') not in ['unknown', 'unavailable'] and
+            states('sensor.adjusted_current_electricity_import_price') not in ['unknown', 'unavailable'] }}
+
+
+      pvgen_minus_houseconsumption:
+        friendly_name: "PVGen - HouseConsumption"
+        unique_id: "pvgen_minus_houseconsumption"
+        unit_of_measurement: "W"
+        value_template: >
+          {% set house_consumption = states('sensor.current_houseconsumption') | float(0) %}
+          {% set pv_power = states('sensor.sn_3012415982_pv_power') | float(0) %}
+          {{ pv_power - house_consumption }}
+        availability_template: >
+          {{ states('sensor.current_houseconsumption') not in ['unknown', 'unavailable'] and
+            states('sensor.sn_3012415982_pv_power') not in ['unknown', 'unavailable'] }}

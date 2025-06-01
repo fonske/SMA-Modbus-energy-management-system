@@ -29,7 +29,7 @@ If you use a classic SMA Energy Meter (not Home Manager 2), this limitation does
 
 My system is a work in progress and I am always trying to improve it. This means that adjustments will still occur. I started this back in 2022 - ... 
 
-You are free to use the code in this project as inspiration, but you remain responsible yourself for what you do with it and for your own system. I am in no means liable for mistakes or damage to you own system. 
+You are free to use the code in this project as inspiration, but you remain responsible yourself for what you do with it and for your own system. I am in no means liable for mistakes or damage to your own system. 
 
 Features in this Release 1.0:
     

@@ -66,7 +66,7 @@ The file "NODE-RED FLOWS Vx.x . JSON" contains al the flows in the pictures belo
 
 <img width="1506" alt="image" src="https://github.com/user-attachments/assets/30601cb8-5a07-41e5-a8d7-a372f6541ad5" />
 
-<img width="1675" alt="image" src="https://github.com/user-attachments/assets/42cc0725-ea89-499f-a1fe-733d622cff18" />
+<img width="1497" alt="image" src="https://github.com/user-attachments/assets/b90ae947-f2d5-45d4-887b-432f3b519baa" />
 
 <img width="1483" alt="image" src="https://github.com/user-attachments/assets/669d6f3c-d366-454e-90d9-9418013f31e3" />
 

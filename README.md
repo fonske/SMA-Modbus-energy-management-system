@@ -54,7 +54,7 @@ Features in this Release 1.0:
 🛠️ Note:
 Feel free to use or modify my flows for your own setup. You do so at your own risk.
 
-<img width="1077" alt="image" src="https://github.com/user-attachments/assets/f219e28d-dbaf-4ff2-b7d8-2c162c36f2c9" />
+<img width="1079" alt="image" src="https://github.com/user-attachments/assets/2870d665-b68d-4c2f-98ec-305f2fcc9b54" />
 
 <img width="993" alt="image" src="https://github.com/user-attachments/assets/8b72d425-1f3d-4b6b-9fc8-65d8495aefa0" />
 

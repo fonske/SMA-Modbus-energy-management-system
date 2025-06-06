@@ -1,0 +1,43 @@
+type: custom:apexcharts-card
+header:
+  show: true
+  title: Solar PV Forecast (kWh)
+graph_span: 7d
+span:
+  start: day
+apex_config:
+  chart:
+    height: 176px
+  dataLabels:
+    style:
+      fontWeight: normal
+      fontSize: 9px
+    background:
+      borderWidth: 0
+      opacity: 0
+      foreColor: black
+      fontWeight: normal
+  xaxis:
+    tooltip:
+      enabled: false
+series:
+  - entity: sensor.solcast_pv_forecast_forecast_today
+    name: PV
+    type: column
+    color: var(--energy-solar-color)
+    opacity: 0.8
+    group_by:
+      func: last
+      duration: 1d
+    show:
+      datalabels: true
+    data_generator: |
+      return [
+          [moment().add(0, 'days'), hass.states['sensor.solcast_pv_forecast_forecast_today'].state],
+          [moment().add(1, 'days'), hass.states['sensor.solcast_pv_forecast_forecast_tomorrow'].state],
+          [moment().add(2, 'days'), hass.states['sensor.solcast_pv_forecast_forecast_day_3'].state],
+          [moment().add(3, 'days'), hass.states['sensor.solcast_pv_forecast_forecast_day_4'].state],
+          [moment().add(4, 'days'), hass.states['sensor.solcast_pv_forecast_forecast_day_5'].state],
+          [moment().add(5, 'days'), hass.states['sensor.solcast_pv_forecast_forecast_day_6'].state],
+          [moment().add(6, 'days'), hass.states['sensor.solcast_pv_forecast_forecast_day_7'].state]
+        ]

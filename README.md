@@ -24,7 +24,7 @@ Since the latest firmware update, Modbus register 41255 (used for curtailment co
 SMA is preparing their own EMS (expected Q3 2025), so they changed how the Home Manager interacts with the inverter.
 
 To regain full control over Modbus, I unlinked the Home Manager 2 from Sunny Portal.
-It now acts like a standard energy meter. It still controls the battery’s basic behavior, but I have full access to all registers again.
+It now acts like a standard energy meter. It still controls the battery’s basic behavior, but I have full access to all modbus registers again.
 If you use a classic SMA Energy Meter (not Home Manager 2), this limitation does not apply. 
 
 My system is a work in progress and I am always trying to improve it. This means that adjustments will still occur. I started this back in 2022 - ... 

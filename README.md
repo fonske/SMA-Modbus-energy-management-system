@@ -35,7 +35,7 @@ The flows in the screenshots contain some nodes that are not standard in Node Re
 
 Node red --> menu on the right (hamburgermenu) --> manage palette --> klik install --> search modules : gate, within-time-switch, traffic, controletimer and install them one by one. 
 
-Features in this Release 1.0:
+Features in this Release 1.2:
     
     1. Zero export when export price is negative → Only generate energy used in the home.
 

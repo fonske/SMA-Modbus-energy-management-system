@@ -31,6 +31,10 @@ My system is a work in progress and I am always trying to improve it. This means
 
 You are free to use the code in this project as inspiration, but you remain responsible yourself for what you do with it and for your own system. I am in no means liable for mistakes or damage to your own system. 
 
+The flows in the screenshots contain some nodes that are not standard in Node Red. You will need to install them the following way. 
+
+Node red --> menu on the right (hamburgermenu) --> manage palette --> klik install --> search modules : gate, within-time-switch, traffic, controletimer and install them one by one. 
+
 Features in this Release 1.0:
     
     1. Zero export when export price is negative → Only generate energy used in the home.

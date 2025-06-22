@@ -33,7 +33,14 @@ You are free to use the code in this project as inspiration, but you remain resp
 
 The flows in the screenshots contain some nodes that are not standard in Node Red. You will need to install them the following way. 
 
-Node red --> menu on the right (hamburgermenu) --> manage palette --> klik install --> search modules : gate, within-time-switch, traffic, controletimer and install them one by one. 
+Node red --> menu on the right (hamburgermenu) --> manage palette --> klik install --> search modules : 
+    - node-red-contrib-simple-gate
+    - node-red-contrib-time-range-switch
+    - node-red-contrib-traffic
+    - node-red-contrib-controltimer
+    - node-red-contrib-stoptimer
+
+gate, within-time-switch, traffic, controletimer and install them one by one. 
 
 Features in this Release 1.2:
     

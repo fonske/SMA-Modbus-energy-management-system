@@ -42,6 +42,9 @@ Node red --> menu on the right (hamburgermenu) --> manage palette --> klik insta
 
 gate, within-time-switch, traffic, controletimer and install them one by one. 
 
+I also made use of the EPEX SPOT integration and in addition the EPEX SPOT SENSOR integration that you can download true HACS community integrations.
+You can make the for the most expensive price in the morning and evening binary sensors to use in the automations. 
+
 Features in this Release 1.2:
     
     1. Zero export when export price is negative → Only generate energy used in the home.

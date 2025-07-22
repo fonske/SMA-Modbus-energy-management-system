@@ -14,6 +14,9 @@ I started this in 2022, when I installed my solar panels:
 
 Inverter: SMA Tripower 8 SE
 
+Technical information of all modbus registers the inverter has, can be found here: 
+https://files.sma.de/downloads/PARAMETER-HTML_STPxx-3SE-40_30109R_V11.zip
+
 Battery: BYD
 
 Energy meter: SMA Home Manager 2
@@ -94,5 +97,7 @@ The file SOLAR_FORECAST(APEXCHART) contains the code to use in an apexchart to m
 
 Example of what a day (11/06/2025) looks like:
 <img width="377" alt="image" src="https://github.com/user-attachments/assets/4d111b06-32cf-4c58-90d6-b6613a883d32" />
+
+
 
 

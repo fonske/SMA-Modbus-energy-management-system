@@ -99,5 +99,9 @@ Example of what a day (11/06/2025) looks like:
 <img width="377" alt="image" src="https://github.com/user-attachments/assets/4d111b06-32cf-4c58-90d6-b6613a883d32" />
 
 
+I added a .JSON with a simplified flow for people with only an inverter, but without a battery, that want to limit the export to the grid and let the inverter only produce what the hopuse is consuming. 
+
+
+
 
 

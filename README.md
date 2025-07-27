@@ -99,7 +99,11 @@ Example of what a day (11/06/2025) looks like:
 <img width="377" alt="image" src="https://github.com/user-attachments/assets/4d111b06-32cf-4c58-90d6-b6613a883d32" />
 
 
-I added a .JSON with a simplified flow for people with only an inverter, but without a battery, that want to limit the export to the grid and let the inverter only produce what the hopuse is consuming. 
+I added a .JSON with a simplified flow for people with only an inverter, but without a battery, that want to limit the export to the grid and let the inverter only produce what the house is consuming. 
+The flow looks like this:
+
+<img width="1396" height="368" alt="image" src="https://github.com/user-attachments/assets/3a26ee2e-8b08-4011-a53e-eb316df5617f" />
+
 
 
 

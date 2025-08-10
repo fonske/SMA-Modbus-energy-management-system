@@ -43,6 +43,7 @@ Node red --> menu on the right (hamburgermenu) --> manage palette --> klik insta
     - node-red-contrib-controltimer
     - node-red-contrib-stoptimer
     - node-red-contrib-sun-position
+    - node-red-contrib-switch-break
 
 gate, within-time-switch, traffic, controletimer and install them one by one. 
 
